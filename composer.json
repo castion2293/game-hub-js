@@ -1,0 +1,44 @@
+{
+    "name": "super-station/gamehub",
+    "description": "遊戲驅動器-核心",
+    "type": "library",
+    "authors": [
+        {
+            "name": "nick",
+            "email": "nick@mail.js-tech.tw"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "ext-json": "*",
+        "symfony/options-resolver": "^5.0",
+        "guzzlehttp/guzzle": "^6.5",
+        "illuminate/support": "^7.0",
+        "jenssegers/mongodb": "dev-develop",
+        "orkhanahmadov/laravel-ip-middleware": "^1.4"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0",
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "SuperStation\\Gamehub\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SuperStation\\Gamehub\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SuperStation\\Gamehub\\GamehubServiceProvider"
+            ],
+            "aliases": {
+                "Gamehub": "SuperStation\\Gamehub\\Facades\\Gamehub"
+            }
+        }
+    }
+}
